@@ -1,0 +1,20 @@
+/* Unified stylesheet: imports base and sections, and exposes stable aliases */
+@import url('./style.css');
+@import url('./sections.css');
+
+/* Theme enforcement */
+:root {
+  --dark: #0d0c1d;
+  --card: #1a192b;
+}
+
+/* Aliases intentionally omitted to avoid duplication; use existing .btn, .btn-outline, .btn-small, .nav-link classes */
+
+/* SVG icons in skills should follow text color and glow */
+.skill-icon svg { width: 2.5rem; height: 2.5rem; fill: currentColor; display: block; }
+
+/* Ensure body scroll lock utility works universally */
+.no-scroll { overflow: hidden !important; }
+
+/* Force Flutter icon to neon blue like others */
+.flutter-skill { color: var(--primary) !important; }

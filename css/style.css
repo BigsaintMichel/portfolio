@@ -29,6 +29,11 @@ body {
   overflow-x: hidden;
 }
 
+/* Lock body scroll when mobile nav is open */
+.no-scroll {
+  overflow: hidden;
+}
+
 /* Fluid media */
 img, video, canvas, svg {
   max-width: 100%;
@@ -114,12 +119,14 @@ img, video, canvas, svg {
   cursor: pointer;
 }
 
-.bar {
+.bar,
+.hamburger span {
   display: block;
-  width: 25px;
+  width: 26px;
   height: 3px;
   margin: 5px auto;
   background-color: var(--light);
+  border-radius: 2px;
   transition: var(--transition);
 }
 
@@ -259,6 +266,7 @@ img, video, canvas, svg {
     transition: var(--transition);
     z-index: 1000;
   }
+  .nav-links a { display: block; padding: 0.9rem 1.2rem; font-size: 1rem; }
   
   .nav-links.active {
     right: 0;
@@ -277,6 +285,7 @@ img, video, canvas, svg {
   .container {
     padding: 0 1rem;
   }
+  .btn { padding: 0.75rem 1.4rem; border-radius: 999px; font-weight: 600; }
 }
 
 /* Reusable particle logo aura */
