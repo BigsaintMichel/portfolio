@@ -29,6 +29,13 @@ body {
   overflow-x: hidden;
 }
 
+/* Fluid media */
+img, video, canvas, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .container {
   width: 100%;
   max-width: 1400px;
@@ -216,5 +223,11 @@ body {
   
   .hero h2 {
     font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 1rem;
   }
 }
