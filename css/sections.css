@@ -129,6 +129,32 @@
   transition: var(--transition);
 }
 
+.skill-icon svg {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: 0.5rem;
+  display: block;
+  transition: var(--transition);
+  fill: currentColor;
+}
+
+/* Neon glow variants for skills */
+.neon-glow.glow-blue i,
+.neon-glow.glow-blue span {
+  color: var(--primary);
+  text-shadow: 0 0 10px rgba(0, 247, 255, 0.6), 0 0 18px rgba(0, 247, 255, 0.35);
+}
+
+.neon-glow.glow-magenta i,
+.neon-glow.glow-magenta span {
+  color: var(--secondary);
+  text-shadow: 0 0 10px rgba(255, 0, 228, 0.6), 0 0 18px rgba(255, 0, 228, 0.35);
+}
+
+.skill-icon span {
+  margin-top: 0.2rem;
+}
+
 .skill-icon:hover {
   transform: translateY(-5px);
 }
@@ -256,6 +282,34 @@
   overflow: hidden;
   position: relative;
   background: #0a0a1a;
+}
+
+/* Center any logo area content (cards) */
+.project-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Center project header logo zone */
+.project-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 260px;
+}
+
+/* Size tweaks for aura inside cards */
+.project-card .logo-aura {
+  width: 200px;
+  height: 200px;
+}
+
+@media (max-width: 768px) {
+  .project-card .logo-aura {
+    width: 160px;
+    height: 160px;
+  }
 }
 
 .project-img img {

@@ -173,7 +173,7 @@
                 <a href="index.html" class="logo">Yrigalé Saint Michel</a>
                 <ul class="nav-links">
                     <li><a href="index.html#about">À propos</a></li>
-                    <li><a href="index.html#projects">Projets</a></li>
+                    <li><a href="projects.html">Projets</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                 </ul>
                 <div class="hamburger">
@@ -189,7 +189,10 @@
     <section class="project-header">
         <div class="container">
             <div class="project-logo">
-                <img src="images/managex.png" alt="Logo ManageX" class="project-logo-img">
+                <div class="logo-aura">
+                    <div class="aura-canvas"></div>
+                    <img src="images/managex.png" alt="Logo ManageX" class="project-logo-img">
+                </div>
             </div>
             <div class="project-description">
                 <h1 class="project-title">ManageX</h1>
@@ -202,6 +205,9 @@
                         <li>Gestion des objectifs hebdomadaires (définis par l'administrateur avec suivi par barre de progression)</li>
                         <li>Gestion des emplois du temps hebdomadaires (statut présence ou télétravail défini par chaque employé)</li>
                     </ul>
+                </div>
+                <div style="display:flex;justify-content:center;margin-top:1.5rem;">
+                  <a class="btn btn-outline" href="https://ya-consulting.com/managex" target="_blank" rel="noopener">Visiter le site</a>
                 </div>
             </div>
         </div>
@@ -322,5 +328,7 @@
         // Load gallery when DOM is ready
         document.addEventListener('DOMContentLoaded', loadGallery);
     </script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

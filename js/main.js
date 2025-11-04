@@ -50,8 +50,8 @@ document.addEventListener('DOMContentLoaded', function() {
         lastScroll = currentScroll;
     });
     
-    // Initialize particles.js
-    if (typeof particlesJS !== 'undefined') {
+    // Initialize particles.js for page background if container exists
+    if (typeof particlesJS !== 'undefined' && document.getElementById('particles-js')) {
         particlesJS('particles-js', {
             particles: {
                 number: {
@@ -130,6 +130,35 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             },
             retina_detect: true
+        });
+    }
+    
+    // Initialize particles auras for each logo
+    if (typeof particlesJS !== 'undefined') {
+        const auraCanvases = document.querySelectorAll('.aura-canvas');
+        let auraIndex = 0;
+        auraCanvases.forEach((canvas) => {
+            // Ensure each canvas has a unique ID for particlesJS
+            if (!canvas.id) {
+                canvas.id = `aura-${++auraIndex}`;
+            }
+            particlesJS(canvas.id, {
+                particles: {
+                    number: { value: 45, density: { enable: true, value_area: 400 } },
+                    color: { value: '#00f7ff' },
+                    shape: { type: 'circle' },
+                    opacity: { value: 0.45, random: true },
+                    size: { value: 2.5, random: true },
+                    line_linked: { enable: true, distance: 110, color: '#00f7ff', opacity: 0.25, width: 1 },
+                    move: { enable: true, speed: 0.8, random: true, out_mode: 'out' }
+                },
+                interactivity: {
+                    detect_on: 'canvas',
+                    events: { onhover: { enable: true, mode: 'grab' }, resize: true },
+                    modes: { grab: { distance: 120, line_linked: { opacity: 0.4 } } }
+                },
+                retina_detect: true
+            });
         });
     }
     

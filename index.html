@@ -24,7 +24,7 @@
                 <ul class="nav-links">
                     <li><a href="#home" class="nav-link active">Accueil</a></li>
                     <li><a href="#about" class="nav-link">À propos</a></li>
-                    <li><a href="#projects" class="nav-link">Projets</a></li>
+                    <li><a href="projects.html" class="nav-link">Projets</a></li>
                     <li><a href="#skills" class="nav-link">Compétences</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
@@ -68,27 +68,23 @@
                     </div>
                     
                     <div class="skills-icons">
-                        <div class="skill-icon">
-                            <i class="fab fa-html5"></i>
-                            <span>HTML5</span>
+                        <div class="skill-icon neon-glow glow-blue" data-aos="zoom-in" data-aos-delay="0"><i class="fab fa-html5"></i><span>HTML5</span></div>
+                        <div class="skill-icon neon-glow glow-blue" data-aos="zoom-in" data-aos-delay="100"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+                        <div class="skill-icon neon-glow glow-blue" data-aos="zoom-in" data-aos-delay="200"><i class="fab fa-js"></i><span>JavaScript</span></div>
+                        <div class="skill-icon neon-glow glow-magenta" data-aos="zoom-in" data-aos-delay="300"><i class="fab fa-react"></i><span>React</span></div>
+                        <div class="skill-icon neon-glow glow-magenta" data-aos="zoom-in" data-aos-delay="400"><i class="fab fa-php"></i><span>PHP</span></div>
+                        <div class="skill-icon neon-glow glow-blue" data-aos="zoom-in" data-aos-delay="500"><i class="fab fa-node-js"></i><span>Node.js</span></div>
+                        <div class="skill-icon neon-glow glow-blue" data-aos="zoom-in" data-aos-delay="600"><i class="fab fa-vuejs"></i><span>Vue.js</span></div>
+                        <div class="skill-icon neon-glow glow-magenta" data-aos="zoom-in" data-aos-delay="700"><i class="fab fa-laravel"></i><span>Laravel</span></div>
+                        <div class="skill-icon neon-glow glow-magenta" data-aos="zoom-in" data-aos-delay="800"><i class="fab fa-python"></i><span>Python</span></div>
+                        <div class="skill-icon neon-glow glow-blue" data-aos="zoom-in" data-aos-delay="900">
+                          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="M14.314 0 0 14.314 3.536 17.85 21.386 0z"/>
+                            <path d="M24 10.607H21.121L12.071 19.657 7.121 14.707 3.586 18.243 9.95 24.607z"/>
+                          </svg>
+                          <span>Flutter</span>
                         </div>
-                        <div class="skill-icon">
-                            <i class="fab fa-css3-alt"></i>
-                            <span>CSS3</span>
-                        </div>
-                        <div class="skill-icon">
-                            <i class="fab fa-js"></i>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="skill-icon">
-                            <i class="fab fa-react"></i>
-                            <span>React</span>
-                        </div>
-                        <div class="skill-icon">
-                            <i class="fab fa-php"></i>
-                            <span>PHP</span>
-                        </div>
-                    </div>
+                    </div> 
                     
                     <a href="cv/YRIGALE.pdf" class="btn btn-outline" download="YRIGALE_CV.pdf">Télécharger mon CV</a>
                 </div>
@@ -101,29 +97,33 @@
         <div class="container">
             <h2 class="section-title">Mes Projets</h2>
             <div class="projects-grid">
-                <!-- GARAF Location -->
+                <!-- Naturalink -->
                 <div class="project-card" data-aos="fade-up">
                     <div class="project-img">
-                        <img src="images/Garaf.png" alt="Logo GARAF Location" style="max-width: 80%; height: auto; margin: 0 auto; display: block;" onerror="this.src='https://via.placeholder.com/600x400?text=GARAF'">
+                        <div class="logo-aura">
+                            <div class="aura-canvas"></div>
+                            <img src="images/naturalink.png" alt="Logo Naturalink" onerror="this.src='https://via.placeholder.com/600x400?text=Naturalink'">
+                        </div>
                     </div>
                     <div class="project-content">
-                        <h3>GARAF Location</h3>
-                        <p>Application de réservation de résidences et location de véhicules, avec interface utilisateur intuitive et gestion des disponibilités.</p>
+                        <h3>Naturalink</h3>
+                        <p>Plateforme de traçabilité agricole, stack React (frontend) et Laravel (backend), architecture Full Stack robuste.</p>
                         <div class="project-tags">
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>JavaScript</span>
-                            <span>PHP</span>
+                            <span>React</span>
+                            <span>Laravel</span>
+                            <span>Full Stack</span>
                         </div>
-                        <a href="garaf.html" class="btn btn-small">Voir le projet</a>
+                        <a href="naturalink.html" class="btn btn-small">Voir le projet</a>
                     </div>
                 </div>
-                
                 
                 <!-- FEES -->
                 <div class="project-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="project-img">
-                        <img src="images/fees.png" alt="Logo FEES" style="max-width: 80%; height: auto; margin: 0 auto; display: block;" onerror="this.src='https://via.placeholder.com/600x400?text=FEES'">
+                        <div class="logo-aura">
+                            <div class="aura-canvas"></div>
+                            <img src="images/fees.png" alt="Logo FEES" onerror="this.src='https://via.placeholder.com/600x400?text=FEES'">
+                        </div>
                     </div>
                     <div class="project-content">
                         <h3>FEES</h3>
@@ -140,7 +140,10 @@
                 <!-- LyStore -->
                 <div class="project-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="project-img">
-                        <img src="images/lystore.png" alt="Logo LyStore" style="max-width: 80%; height: auto; margin: 0 auto; display: block;" onerror="this.src='https://via.placeholder.com/600x400?text=LyStore'">
+                        <div class="logo-aura">
+                            <div class="aura-canvas"></div>
+                            <img src="images/lystore.png" alt="Logo LyStore" onerror="this.src='https://via.placeholder.com/600x400?text=LyStore'">
+                        </div>
                     </div>
                     <div class="project-content">
                         <h3>LyStore</h3>
@@ -158,7 +161,10 @@
                 <!-- CATREPS SARL -->
                 <div class="project-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="project-img">
-                        <img src="images/CATREPS.png" alt="Logo CATREPS SARL" style="max-width: 80%; height: auto; margin: 0 auto; display: block;" onerror="this.src='https://via.placeholder.com/600x400?text=CATREPS'">
+                        <div class="logo-aura">
+                            <div class="aura-canvas"></div>
+                            <img src="images/CATREPS.png" alt="Logo CATREPS SARL" onerror="this.src='https://via.placeholder.com/600x400?text=CATREPS'">
+                        </div>
                     </div>
                     <div class="project-content">
                         <h3>CATREPS SARL</h3>
@@ -176,7 +182,10 @@
                 <!-- ManageX -->
                 <div class="project-card managex-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="project-img managex-logo">
-                        <img src="images/managex.png" alt="Logo ManageX" style="max-width: 80%; height: auto; margin: 0 auto; display: block;">
+                        <div class="logo-aura">
+                            <div class="aura-canvas"></div>
+                            <img src="images/managex.png" alt="Logo ManageX">
+                        </div>
                     </div>
                     <div class="project-content">
                         <h3>ManageX</h3>
@@ -193,7 +202,10 @@
                 <!-- EduSave -->
                 <div class="project-card edusave-card" data-aos="fade-up" data-aos-delay="150">
                     <div class="project-img edusave-logo">
-                        <img src="images/Edusave.png" alt="Logo EduSave" style="max-width: 80%; height: auto; margin: 0 auto; display: block;" onerror="this.src='https://via.placeholder.com/300x150?text=EduSave+Logo'">
+                        <div class="logo-aura">
+                            <div class="aura-canvas"></div>
+                            <img src="images/Edusave.png" alt="Logo EduSave" onerror="this.src='https://via.placeholder.com/300x150?text=EduSave+Logo'">
+                        </div>
                     </div>
                     <div class="project-content">
                         <h3>EduSave</h3>
