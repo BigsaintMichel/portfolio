@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GARAF Location - Détails du Projet</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .project-header { padding: 4rem 0 2rem; background: linear-gradient(135deg, rgba(0, 20, 40, 0.9) 0%, rgba(0, 10, 20, 0.9) 100%); border-bottom: 1px solid rgba(0, 255, 247, 0.2); }
+        .project-logo { text-align: center; margin-bottom: 2rem; }
+        .project-logo-img { max-width: 200px; height: auto; border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); }
+        .project-title { color: var(--primary); font-size: 2.5rem; margin-bottom: 1.5rem; text-align: center; text-shadow: 0 0 10px rgba(0, 255, 247, 0.3); }
+        .project-description { max-width: 800px; margin: 0 auto; color: #e0e0e0; line-height: 1.8; font-size: 1.1rem; }
+        .project-features { margin: 1.5rem 0 0 1.5rem; }
+        .project-features li { margin-bottom: 0.8rem; position: relative; padding-left: 1.5rem; }
+        .project-features li::before { content: '▹'; position: absolute; left: 0; color: var(--primary); }
+        .features { padding: 3rem 0; background: rgba(255, 255, 255, 0.03); }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.5rem; max-width: 1000px; margin: 2rem auto 0; }
+        .feature-item { display: flex; align-items: center; padding: 1rem; background: rgba(255, 255, 255, 0.05); border-radius: 8px; transition: all 0.3s ease; border: 1px solid rgba(0, 255, 247, 0.1); }
+        .feature-item:hover { transform: translateY(-3px); background: rgba(0, 255, 247, 0.1); box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); }
+        .feature-item i { font-size: 1.5rem; color: var(--primary); margin-right: 1rem; width: 30px; text-align: center; }
+        .feature-item span { color: #e0e0e0; font-size: 1rem; font-weight: 500; }
+        .gallery-container { padding: 2rem 0; max-width: 1200px; margin: 0 auto; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; padding: 1rem; }
+        .gallery-item { position: relative; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; aspect-ratio: 16/9; }
+        .gallery-item:hover { transform: scale(1.02); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        @media (max-width: 992px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) { .gallery-grid { grid-template-columns: 1fr; } .features-grid { grid-template-columns: repeat(2, 1fr); padding: 0 1rem; } }
+        @media (max-width: 480px) { .features-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">Yrigalé Saint Michel</a>
+                <ul class="nav-links">
+                    <li><a href="index.html#about">À propos</a></li>
+                    <li><a href="index.html#projects">Projets</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger"><span></span><span></span><span></span></div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="project-header">
+        <div class="container">
+            <div class="project-logo">
+                <img src="images/Garaf.png" alt="Logo GARAF" class="project-logo-img" onerror="this.src='https://via.placeholder.com/200x200?text=GARAF'">
+            </div>
+            <div class="project-description">
+                <h1 class="project-title">GARAF Location</h1>
+                <div class="project-content">
+                    <p>Application de réservation de résidences et de location de véhicules avec interface intuitive et gestion des disponibilités.</p>
+                    <ul class="project-features">
+                        <li>Réservation en ligne</li>
+                        <li>Gestion de calendrier</li>
+                        <li>Interface moderne et responsive</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Fonctionnalités principales</h2>
+            <div class="features-grid">
+                <div class="feature-item"><i class="fas fa-calendar-check"></i><span>Réservations</span></div>
+                <div class="feature-item"><i class="fas fa-car"></i><span>Véhicules</span></div>
+                <div class="feature-item"><i class="fas fa-map-marker-alt"></i><span>Localisation</span></div>
+                <div class="feature-item"><i class="fas fa-mobile-alt"></i><span>Responsive</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects">
+        <div class="container">
+            <h2 class="section-title">Galerie d'écrans</h2>
+            <div class="gallery-grid" id="galleryContainer"></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Tous droits réservés à Saint Michel</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        // Aucune galerie trouvée pour GARAF pour le moment
+        const garafImages = [
+            // Ajoutez ici les noms de fichiers si un dossier images/GARAF est ajouté
+        ];
+        function loadGallery() {
+            const galleryContainer = document.getElementById('galleryContainer');
+            if (!galleryContainer) return;
+            if (garafImages.length === 0) {
+                galleryContainer.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: #fff;">Aucune image trouvée pour ce projet.</p>';
+                return;
+            }
+            const galleryHTML = garafImages.map(image => `
+                <div class="gallery-item">
+                    <img src="images/GARAF/${encodeURIComponent(image)}" alt="Capture d'écran GARAF" loading="lazy" onerror="this.src='https://via.placeholder.com/600x400?text=Image+non+chargée'">
+                </div>
+            `).join('');
+            galleryContainer.innerHTML = galleryHTML;
+        }
+        document.addEventListener('DOMContentLoaded', loadGallery);
+    </script>
+</body>
+</html>
+
+

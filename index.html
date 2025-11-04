@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Développeur</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="#">Portfolio</a>
+            </div>
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active">Accueil</a></li>
+                    <li><a href="#about" class="nav-link">À propos</a></li>
+                    <li><a href="#projects" class="nav-link">Projets</a></li>
+                    <li><a href="#skills" class="nav-link">Compétences</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="typing-text">Bonjour, je suis <span class="highlight">saint Michel Yrigale</span></h1>
+                <h2 class="typing-text-2">Développeur Full Stack</h2>
+                <p class="fade-in">Je crée des expériences numériques exceptionnelles avec du code propre et moderne.</p>
+                <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">À propos de moi</h2>
+            <div class="about-content">
+                <div class="about-img">
+                    <div class="img-container">
+                        <img src="./images/photo.png" alt="Yrigalé Saint Michel" class="profile-img" onerror="this.src='https://via.placeholder.com/250x250?text=Photo+de+profil+manquante'">
+                    </div>
+                </div> 
+                <div class="about-text">
+                    <h3>Yrigalé Saint Michel</h3>
+                    <p>Développeur passionné par la création d'applications web et mobiles innovantes. Avec une solide expérience en développement Frontend et Backend, je m'efforce de créer des solutions élégantes et performantes qui répondent aux besoins des utilisateurs.</p>
+                    <div class="personal-info">
+                        <p><i class="fas fa-envelope"></i> saintmichelyirigale@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> 07 48 98 18 79</p>
+                    </div>
+                    
+                    <div class="skills-icons">
+                        <div class="skill-icon">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-icon">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-icon">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-icon">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="skill-icon">
+                            <i class="fab fa-php"></i>
+                            <span>PHP</span>
+                        </div>
+                    </div>
+                    
+                    <a href="cv/YRIGALE.pdf" class="btn btn-outline" download="YRIGALE_CV.pdf">Télécharger mon CV</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Mes Projets</h2>
+            <div class="projects-grid">
+                <!-- GARAF Location -->
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-img">
+                        <img src="images/Garaf.png" alt="Logo GARAF Location" style="max-width: 80%; height: auto; margin: 0 auto; display: block;" onerror="this.src='https://via.placeholder.com/600x400?text=GARAF'">
+                    </div>
+                    <div class="project-content">
+                        <h3>GARAF Location</h3>
+                        <p>Application de réservation de résidences et location de véhicules, avec interface utilisateur intuitive et gestion des disponibilités.</p>
+                        <div class="project-tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>PHP</span>
+                        </div>
+                        <a href="garaf.html" class="btn btn-small">Voir le projet</a>
+                    </div>
+                </div>
+                
+                
+                <!-- FEES -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-img">
+                        <img src="images/fees.png" alt="Logo FEES" style="max-width: 80%; height: auto; margin: 0 auto; display: block;" onerror="this.src='https://via.placeholder.com/600x400?text=FEES'">
+                    </div>
+                    <div class="project-content">
+                        <h3>FEES</h3>
+                        <p>Application BNPL permettant d'acheter des articles et de payer en plusieurs fois avec réception immédiate après le premier paiement.</p>
+                        <div class="project-tags">
+                            <span>Flutter</span>
+                            <span>SQLite</span>
+                            <span>Paiement en ligne</span>
+                        </div>
+                        <a href="fees.html" class="btn btn-small">Voir le projet</a>
+                    </div>
+                </div>
+                
+                <!-- LyStore -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-img">
+                        <img src="images/lystore.png" alt="Logo LyStore" style="max-width: 80%; height: auto; margin: 0 auto; display: block;" onerror="this.src='https://via.placeholder.com/600x400?text=LyStore'">
+                    </div>
+                    <div class="project-content">
+                        <h3>LyStore</h3>
+                        <p>Site de vente de vêtements modernes, chaussures et accessoires, avec interaction au survol des articles et design sobre et haut de gamme.</p>
+                        <div class="project-tags">
+                            <span>Laravel</span>
+                            <span>Bootstrap</span>
+                            <span>MySQL</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <a href="lystore.html" class="btn btn-small">Voir le projet</a>
+                    </div>
+                </div>
+                
+                <!-- CATREPS SARL -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-img">
+                        <img src="images/CATREPS.png" alt="Logo CATREPS SARL" style="max-width: 80%; height: auto; margin: 0 auto; display: block;" onerror="this.src='https://via.placeholder.com/600x400?text=CATREPS'">
+                    </div>
+                    <div class="project-content">
+                        <h3>CATREPS SARL</h3>
+                        <p>Refonte complète du site web de l'entreprise spécialisée dans le gaz domestique, professionnel et industriel.</p>
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>Responsive</span>
+                        </div>
+                        <a href="catreps.html" class="btn btn-small">Voir le projet</a>
+                    </div>
+                </div>
+                
+                <!-- ManageX -->
+                <div class="project-card managex-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-img managex-logo">
+                        <img src="images/managex.png" alt="Logo ManageX" style="max-width: 80%; height: auto; margin: 0 auto; display: block;">
+                    </div>
+                    <div class="project-content">
+                        <h3>ManageX</h3>
+                        <p>Application de gestion d'entreprise complète avec messagerie instantanée, transfert de fichiers et suivi des objectifs.</p>
+                        <div class="project-tags">
+                            <span>Laravel</span>
+                            <span>Vue.js</span>
+                            <span>MySQL</span>
+                        </div>
+                        <a href="managex.html" class="btn btn-outline">Voir la galerie</a>
+                    </div>
+                </div>
+                
+                <!-- EduSave -->
+                <div class="project-card edusave-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="project-img edusave-logo">
+                        <img src="images/Edusave.png" alt="Logo EduSave" style="max-width: 80%; height: auto; margin: 0 auto; display: block;" onerror="this.src='https://via.placeholder.com/300x150?text=EduSave+Logo'">
+                    </div>
+                    <div class="project-content">
+                        <h3>EduSave</h3>
+                        <p>Application mobile de gestion de budget développée avec Flutter. Elle permet de répartir un budget mensuel en catégories, de visualiser en temps réel l'état des finances, de gérer les dépenses par catégorie et de recevoir des alertes en fonction du niveau de consommation.</p>
+                        <div class="project-tags">
+                            <span>Flutter</span>
+                            <span>Dart</span>
+                            <span>Firebase</span>
+                        </div>
+                        <a href="edusave.html" class="btn btn-outline">Voir la galerie</a>
+                    </div>
+                </div>
+                
+            
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Mes Compétences</h2>
+            <div class="skills-container">
+                <div class="skill-item" data-aos="fade-right">
+                    <div class="skill-info">
+                        <span>HTML5</span>
+                        <span>95%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 95%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item" data-aos="fade-right" data-aos-delay="100">
+                    <div class="skill-info">
+                        <span>CSS3</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item" data-aos="fade-right" data-aos-delay="200">
+                    <div class="skill-info">
+                        <span>JavaScript</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 85%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item" data-aos="fade-right" data-aos-delay="300">
+                    <div class="skill-info">
+                        <span>React</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item" data-aos="fade-right" data-aos-delay="400">
+                    <div class="skill-info">
+                        <span>Flutter</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item" data-aos="fade-right" data-aos-delay="500">
+                    <div class="skill-info">
+                        <span>PHP</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item" data-aos="fade-right" data-aos-delay="600">
+                    <div class="skill-info">
+                        <span>MySQL</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 85%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Me Contacter</h2>
+            <div class="contact-container">
+                <div class="contact-info" data-aos="fade-right">
+                    <h3>Restons en contact</h3>
+                    <p>N'hésitez pas à me contacter pour toute opportunité ou collaboration.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>saintmichelyirigale@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Téléphone</h4>
+                                <p>07 48 98 18 79</p>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="https://github.com/BigsaintMichel" target="_blank" rel="noopener noreferrer" class="social-icon" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/saint-michel-yirigale-945570328" target="_blank" rel="noopener noreferrer" class="social-icon" title="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://www.instagram.com/big_saintmichel" target="_blank" rel="noopener noreferrer" class="social-icon" title="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form" data-aos="fade-left">
+                    <div class="form-group">
+                        <input type="text" id="name" required>
+                        <label for="name">Votre nom</label>
+                        <span class="focus-border"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" id="email" required>
+                        <label for="email">Votre email</label>
+                        <span class="focus-border"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="text" id="subject" required>
+                        <label for="subject">Sujet</label>
+                        <span class="focus-border"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="message" rows="4" required></textarea>
+                        <label for="message">Votre message</label>
+                        <span class="focus-border"></span>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Envoyer le message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#">Portfolio</a>
+                </div>
+                <p class="copyright">&copy; 2025 Tous droits réservés à Saint Michel</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        AOS.init({
+          duration: 800,
+          easing: 'ease-in-out',
+          once: true,
+          mirror: false
+        });
+      });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
