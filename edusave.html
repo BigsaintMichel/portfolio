@@ -3,9 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduSave - Détails du Projet</title>
+    <title>EduSave — Budget mobile</title>
+    <meta name="description" content="EduSave : application mobile de gestion de budget développée avec Flutter et Firebase, répartition par catégories et alertes.">
+    <meta property="og:title" content="EduSave — Budget mobile">
+    <meta property="og:description" content="Application mobile de gestion de budget (Flutter, Firebase).">
+    <meta property="og:image" content="https://bigsaintmichel.github.io/portfolio/images/og-image.png">
+    <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bigsaintmichel.github.io/portfolio/edusave.html">
+  <meta name="twitter:card" content="summary_large_image">
+      <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         /* Project Header Styles */
         .project-header {
@@ -170,14 +182,15 @@
                 <a href="index.html" class="logo">Yrigalé Saint Michel</a>
                 <ul class="nav-links">
                     <li><a href="index.html#about">À propos</a></li>
+                    <li><a class="nav-link" href="index.html#formation">Formation</a></li>
                     <li><a href="projects.html">Projets</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                 </ul>
-                <div class="hamburger">
+                <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </button>
             </nav>
         </div>
     </header>
@@ -188,7 +201,7 @@
             <div class="project-logo">
                 <div class="logo-aura">
                     <div class="aura-canvas"></div>
-                    <img src="images/Edusave.png?v=1" alt="Logo EduSave" class="project-logo-img" onerror="this.src='https://via.placeholder.com/200x200?text=EduSave'">
+                    <img loading="lazy" src="images/Edusave.png?v=1" alt="Logo EduSave" class="project-logo-img" onerror="this.src='https://via.placeholder.com/200x200?text=EduSave'">
                 </div>
             </div>
             <div class="project-description">
@@ -253,7 +266,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Tous droits réservés à Saint Michel</p>
+            <p>&copy; <span id="year">2026</span> Tous droits réservés à Saint Michel</p>
         </div>
     </footer>
 
@@ -263,9 +276,10 @@
 
         // List of EduSave images
         const edusaveImages = [
-            'Screenshot_20250828-113539.png',
-            'Screenshot_20250828-113552.png',
-            'Screenshot_20250828-113555.png',
+            'screenshot-20250828-113539.png',
+            'screenshot-20250828-113552.png',
+            'screenshot-20250828-113555.png',
+            'screenshot-20250828-113559.png',
             // Add more image filenames as needed
         ];
 

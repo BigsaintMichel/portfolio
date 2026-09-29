@@ -3,9 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ManageX - Détails du Projet</title>
+    <title>ManageX — Gestion d’entreprise</title>
+    <meta name="description" content="ManageX : application de gestion d'entreprise avec messagerie instantanée, transfert de fichiers et suivi des objectifs.">
+    <meta property="og:title" content="ManageX — Gestion d’entreprise">
+    <meta property="og:description" content="Suite de gestion d'entreprise inspirée de Slack (Laravel, Vue.js, MySQL).">
+    <meta property="og:image" content="https://bigsaintmichel.github.io/portfolio/images/og-image.png">
+    <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bigsaintmichel.github.io/portfolio/managex.html">
+  <meta name="twitter:card" content="summary_large_image">
+      <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         /* Project Header Styles */
         .project-header {
@@ -172,14 +184,15 @@
                 <a href="index.html" class="logo">Yrigalé Saint Michel</a>
                 <ul class="nav-links">
                     <li><a href="index.html#about">À propos</a></li>
+                    <li><a class="nav-link" href="index.html#formation">Formation</a></li>
                     <li><a href="projects.html">Projets</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                 </ul>
-                <div class="hamburger">
+                <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </button>
             </nav>
         </div>
     </header>
@@ -190,7 +203,7 @@
             <div class="project-logo">
                 <div class="logo-aura">
                     <div class="aura-canvas"></div>
-                    <img src="images/managex.png" alt="Logo ManageX" class="project-logo-img">
+                    <img loading="lazy" src="images/managex.png" alt="Logo ManageX" class="project-logo-img">
                 </div>
             </div>
             <div class="project-description">
@@ -274,7 +287,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Tous droits réservés à Saint Michel</p>
+            <p>&copy; <span id="year">2026</span> Tous droits réservés à Saint Michel</p>
         </div>
     </footer>
 
@@ -284,19 +297,19 @@
 
         // List of ManageX images
         const managexImages = [
-            'Capture d\'écran_20250911_113032.png',
-            'Capture d\'écran_20250911_113145.png',
-            'Capture d\'écran_20250911_113207.png',
-            'Capture d\'écran_20250911_113243.png',
-            'Capture d\'écran_20250911_113255.png',
-            'Capture d\'écran_20250911_113305.png',
-            'Capture d\'écran_20250911_113318.png',
-            'Capture d\'écran_20250911_113329.png',
-            'Capture d\'écran_20250911_113338.png',
-            'Capture d\'écran_20250911_113425.png',
-            'Capture d\'écran_20250911_113432.png',
-            'creation_de_compte.png',
-            'ecran_d\'acceuil.png'
+            'capture-ecran-20250911_113032.png',
+            'capture-ecran-20250911_113145.png',
+            'capture-ecran-20250911_113207.png',
+            'capture-ecran-20250911_113243.png',
+            'capture-ecran-20250911_113255.png',
+            'capture-ecran-20250911_113305.png',
+            'capture-ecran-20250911_113318.png',
+            'capture-ecran-20250911_113329.png',
+            'capture-ecran-20250911_113338.png',
+            'capture-ecran-20250911_113425.png',
+            'capture-ecran-20250911_113432.png',
+            'creation-de-compte.png',
+            'ecran-accueil.png'
         ];
 
         // Function to load images

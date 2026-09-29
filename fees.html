@@ -3,9 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FEES - Détails du Projet</title>
+    <title>FEES — Fintech BNPL</title>
+    <meta name="description" content="FEES : application mobile BNPL permettant d'acheter des articles et de payer en plusieurs fois.">
+    <meta property="og:title" content="FEES — Fintech BNPL">
+    <meta property="og:description" content="Application BNPL : paiement en plusieurs fois, réception immédiate.">
+    <meta property="og:image" content="https://bigsaintmichel.github.io/portfolio/images/og-image.png">
+    <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bigsaintmichel.github.io/portfolio/fees.html">
+  <meta name="twitter:card" content="summary_large_image">
+      <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         .project-header { padding: 4rem 0 2rem; background: linear-gradient(135deg, rgba(0, 20, 40, 0.9) 0%, rgba(0, 10, 20, 0.9) 100%); border-bottom: 1px solid rgba(0, 255, 247, 0.2); }
         .project-logo { text-align: center; margin-bottom: 2rem; }
@@ -36,10 +48,11 @@
                 <a href="index.html" class="logo">Yrigalé Saint Michel</a>
                 <ul class="nav-links">
                     <li><a href="index.html#about">À propos</a></li>
+                    <li><a class="nav-link" href="index.html#formation">Formation</a></li>
                     <li><a href="projects.html">Projets</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                 </ul>
-                <div class="hamburger"><span></span><span></span><span></span></div>
+                <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
             </nav>
         </div>
     </header>
@@ -49,7 +62,7 @@
             <div class="project-logo">
                 <div class="logo-aura">
                     <div class="aura-canvas"></div>
-                    <img src="images/fees.png" alt="Logo FEES" class="project-logo-img" onerror="this.src='https://via.placeholder.com/200x200?text=FEES'">
+                    <img loading="lazy" src="images/fees.png" alt="Logo FEES" class="project-logo-img" onerror="this.src='https://via.placeholder.com/200x200?text=FEES'">
                 </div>
             </div>
             <div class="project-description">
@@ -90,7 +103,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Tous droits réservés à Saint Michel</p>
+            <p>&copy; <span id="year">2026</span> Tous droits réservés à Saint Michel</p>
         </div>
     </footer>
 

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TraceLot / BioStock — Traçabilité industrielle</title>
+  <meta name="description" content="TraceLot / BioStock : solution de traçabilité et sécurisation de la chaîne d'approvisionnement en biomasse pour la centrale ECOR Divo. Flutter, Node.js, Supabase, Hedera.">
+  <meta property="og:title" content="TraceLot / BioStock — Traçabilité industrielle">
+  <meta property="og:description" content="Traçabilité industrielle offline-first avec ancrage blockchain pour la conformité ESG et EUDR.">
+  <meta property="og:image" content="https://bigsaintmichel.github.io/portfolio/images/og-image.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bigsaintmichel.github.io/portfolio/tracelot.html">
+  <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .project-header { padding: 4rem 0 2rem; background: linear-gradient(135deg, rgba(0, 20, 40, 0.9) 0%, rgba(0, 10, 20, 0.9) 100%); border-bottom: 1px solid rgba(0, 255, 247, 0.2); }
+    .project-logo { text-align: center; margin-bottom: 2rem; }
+    .project-logo-img { max-width: 200px; height: auto; border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); }
+    .project-title { color: var(--primary); font-size: 2.5rem; margin-bottom: 1.25rem; text-align: center; text-shadow: 0 0 10px rgba(0, 255, 247, 0.3); }
+    .project-subtitle { text-align: center; color: #e0e0e0; font-size: 1.15rem; margin-bottom: 1rem; }
+    .project-meta { display: flex; flex-wrap: wrap; gap: .5rem .75rem; justify-content: center; margin-bottom: 1.5rem; }
+    .project-meta .meta-tag { background: rgba(255,255,255,.08); border: 1px solid rgba(0,255,247,.3); padding: .35rem .8rem; border-radius: 999px; font-size: .85rem; color: var(--primary); }
+    .project-description { max-width: 900px; margin: 0 auto; color: #e0e0e0; line-height: 1.85; font-size: 1.08rem; }
+    .stack { display: flex; flex-wrap: wrap; gap: .5rem .75rem; justify-content: center; margin: 1rem 0 0; }
+    .stack .tag { background: rgba(255,255,255,.06); border: 1px solid rgba(0,255,247,.18); padding: .45rem .8rem; border-radius: 999px; font-size: .95rem; }
+
+    .section { padding: 3rem 0; background: rgba(255, 255, 255, 0.03); }
+    .section .content { max-width: 1000px; margin: 0 auto; }
+    .section h2 { text-align: center; margin-bottom: 1rem; }
+    .project-features { margin: 1.5rem 0 0 1.5rem; }
+    .project-features li { margin-bottom: 0.8rem; position: relative; padding-left: 1.5rem; }
+    .project-features li::before { content: '▹'; position: absolute; left: 0; color: var(--primary); }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="index.html" class="logo">Yrigalé Saint Michel</a>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="index.html#about">À propos</a></li>
+          <li><a class="nav-link" href="index.html#formation">Formation</a></li>
+          <li><a class="nav-link" href="projects.html">Projets</a></li>
+          <li><a class="nav-link" href="index.html#contact">Contact</a></li>
+        </ul>
+        <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Project Header Section -->
+  <section class="project-header">
+    <div class="container">
+      <div class="project-logo">
+        <div class="logo-container">
+          <div class="logo-aura">
+            <div class="aura-canvas"></div>
+            <img loading="lazy" src="images/tracelot/logo.svg" alt="Logo TraceLot" class="project-logo-img">
+          </div>
+        </div>
+      </div>
+      <div class="project-description">
+        <h1 class="project-title">TraceLot / BioStock</h1>
+        <p class="project-subtitle">Traçabilité et sécurisation de la chaîne d'approvisionnement en biomasse</p>
+        <div class="project-meta">
+          <span class="meta-tag">2026</span>
+          <span class="meta-tag">Mobile + Web + IA</span>
+          <span class="meta-tag">En développement (MVP)</span>
+        </div>
+        <p>Solution de traçabilité industrielle pour la centrale thermique ECOR Divo (SODEN, Côte d'Ivoire). Application mobile offline-first, plateforme web de supervision, backend Node.js, et ancrage blockchain pour la conformité ESG et EUDR.</p>
+        <div class="stack">
+          <span class="tag">Flutter</span>
+          <span class="tag">Dart</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">Fastify</span>
+          <span class="tag">Supabase</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">Hedera</span>
+          <span class="tag">Firebase</span>
+          <span class="tag">SQLite</span>
+        </div>
+        <div style="display:flex;justify-content:center;gap:.75rem;flex-wrap:wrap;margin-top:1.6rem;">
+          <a class="btn btn-outline" href="https://github.com/BigsaintMichel/tracelot-showcase" target="_blank" rel="noopener"><i class="fab fa-github"></i> Voir le showcase sur GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Points Section -->
+  <section class="section">
+    <div class="container content">
+      <h2 class="section-title">Points clés</h2>
+      <ul class="project-features">
+        <li>Détection automatique des fraudes (mouillage, vol de matière sèche)</li>
+        <li>Calcul de la matière sèche (MS) en temps réel</li>
+        <li>Mode offline-first pour les zones rurales</li>
+        <li>Ancrage blockchain SHA-256 sur Hedera</li>
+        <li>3 rôles : agent de collecte, logisticien, agent de réception</li>
+        <li>Architecture : Flutter + Node.js + Supabase + Hedera + Firebase</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Links Section -->
+  <section class="section">
+    <div class="container content" style="text-align:center;">
+      <h2 class="section-title">Liens</h2>
+      <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-top:1.5rem;">
+        <a class="btn btn-outline" href="https://github.com/BigsaintMichel/tracelot-showcase" target="_blank" rel="noopener"><i class="fab fa-github"></i> Voir le showcase sur GitHub</a>
+        <a class="btn btn-outline" href="index.html#contact"><i class="fas fa-envelope"></i> Demander une démo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="year">2026</span> Tous droits réservés à Saint Michel</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

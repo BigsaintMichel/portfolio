@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Naturalink — Traçabilité agricole</title>
-  <meta name="description" content="Naturalink : plateforme de traçabilité agroalimentaire garantissant la transparence de la chaîne de valeur via QR code.">
-  <meta property="og:title" content="Naturalink — Traçabilité agricole">
-  <meta property="og:description" content="Plateforme de traçabilité agroalimentaire, de la production au consommateur.">
+  <title>JMS Afrique — Application web complète</title>
+  <meta name="description" content="Application web complète de l'initiative citoyenne Jeunes — Médias & Société (JMS Afrique) : backend PHP, actualités, archives, newsletter et administration.">
+  <meta property="og:title" content="JMS Afrique — Application web complète">
+  <meta property="og:description" content="Application web complète dédiée à la promotion de la paix en Afrique de l'Ouest.">
   <meta property="og:image" content="https://bigsaintmichel.github.io/portfolio/images/og-image.png">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://bigsaintmichel.github.io/portfolio/naturalink.html">
+  <meta property="og:url" content="https://bigsaintmichel.github.io/portfolio/jms-afrique.html">
   <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -23,18 +23,18 @@
     .project-logo { text-align: center; margin-bottom: 2rem; }
     .project-logo-img { max-width: 200px; height: auto; border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); }
     .project-title { color: var(--primary); font-size: 2.5rem; margin-bottom: 1.25rem; text-align: center; text-shadow: 0 0 10px rgba(0, 255, 247, 0.3); }
+    .project-subtitle { text-align: center; color: #e0e0e0; font-size: 1.15rem; margin-bottom: 1rem; }
+    .project-meta { display: flex; flex-wrap: wrap; gap: .5rem .75rem; justify-content: center; margin-bottom: 1.5rem; }
+    .project-meta .meta-tag { background: rgba(255,255,255,.08); border: 1px solid rgba(0,255,247,.3); padding: .35rem .8rem; border-radius: 999px; font-size: .85rem; color: var(--primary); }
     .project-description { max-width: 900px; margin: 0 auto; color: #e0e0e0; line-height: 1.85; font-size: 1.08rem; }
     .stack { display: flex; flex-wrap: wrap; gap: .5rem .75rem; justify-content: center; margin: 1rem 0 0; }
     .stack .tag { background: rgba(255,255,255,.06); border: 1px solid rgba(0,255,247,.18); padding: .45rem .8rem; border-radius: 999px; font-size: .95rem; }
-
     .section { padding: 3rem 0; background: rgba(255, 255, 255, 0.03); }
     .section .content { max-width: 1000px; margin: 0 auto; }
     .section h2 { text-align: center; margin-bottom: 1rem; }
-    .qr-flow { display: grid; gap: 1rem; grid-template-columns: repeat(2, 1fr); margin-top: 1.25rem; }
-    .qr-flow .card { background: rgba(255,255,255,.05); border: 1px solid rgba(0,255,247,.12); border-radius: 10px; padding: 1rem 1.25rem; }
-    .qr-flow .card h4 { color: var(--primary); margin-bottom: .5rem; }
-
-    @media (max-width: 768px){ .qr-flow { grid-template-columns: 1fr; padding: 0 1rem; } }
+    .project-features { margin: 1.5rem 0 0 1.5rem; }
+    .project-features li { margin-bottom: 0.8rem; position: relative; padding-left: 1.5rem; }
+    .project-features li::before { content: '▹'; position: absolute; left: 0; color: var(--primary); }
   </style>
 </head>
 <body>
@@ -61,52 +61,45 @@
         <div class="logo-container">
           <div class="logo-aura">
             <div class="aura-canvas"></div>
-            <img loading="lazy" src="images/naturalink.png?v=1" alt="Logo Naturalink" class="project-logo-img" onerror="this.src='https://via.placeholder.com/200x200?text=Naturalink'">
+            <img loading="lazy" src="images/jms-afrique/logo.png" alt="Logo JMS Afrique" class="project-logo-img">
           </div>
         </div>
       </div>
       <div class="project-description">
-        <h1 class="project-title">Naturalink</h1>
-        <p>Naturalink est une plateforme de traçabilité agroalimentaire qui garantit la transparence de bout en bout de la chaîne de valeur. Chaque étape importante de la vie d’un produit est enregistrée dans une base sécurisée, puis exposée au consommateur via un QR code sur l’emballage. L’objectif : certifier l’origine, les conditions de culture/transformation et instaurer la confiance.</p>
+        <h1 class="project-title">JMS Afrique</h1>
+        <p class="project-subtitle">Plateforme citoyenne — Jeunes Médias &amp; Société</p>
+        <div class="project-meta">
+          <span class="meta-tag">2026</span>
+          <span class="meta-tag">Application web complète</span>
+          <span class="meta-tag">En ligne</span>
+        </div>
+        <p>Plateforme web complète de l'initiative citoyenne Jeunes — Médias &amp; Société (JMS Afrique), dédiée à la promotion de la paix et de la stabilité en Afrique de l'Ouest. Backend PHP, gestion d'actualités, archives, service de newsletter et interface d'administration.</p>
         <div class="stack">
-          <span class="tag">Frontend: React 19</span>
-          <span class="tag">Backend: NestJS</span>
-          <span class="tag">API REST</span>
-          <span class="tag">Base de données</span>
-          <span class="tag">Blockchain (Traçabilité)</span>
+          <span class="tag">HTML5</span>
+          <span class="tag">CSS3</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">PHP</span>
+          <span class="tag">MySQL</span>
         </div>
         <div style="display:flex;justify-content:center;margin-top:1.6rem;">
-          <a class="btn btn-outline" href="https://naturalink.vercel.app" target="_blank" rel="noopener">Visiter le site</a>
+          <a class="btn btn-outline" href="https://jmsafrique.org/" target="_blank" rel="noopener">Visiter le site</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- About/Traceability Section -->
+  <!-- Key Features Section -->
   <section class="section">
     <div class="container content">
-      <h2 class="section-title">Traçabilité Agroalimentaire</h2>
-      <p>La plateforme permet aux <strong>producteurs</strong> et acteurs de la chaîne d’approvisionnement d’<strong>enregistrer chaque étape clé</strong> de la vie d’un produit dans une base sécurisée. Ces enregistrements constituent un journal infalsifiable consultable par le consommateur via un QR code. Le mécanisme assure une <strong>preuve d’origine</strong>, une <strong>transparence</strong> sur les pratiques et un meilleur <strong>contrôle qualité</strong>.</p>
-      <div class="qr-flow">
-        <div class="card">
-          <h4>Côté Producteur</h4>
-          <ul class="project-features">
-            <li>Déclaration des étapes: semis, entretien, récolte</li>
-            <li>Enregistrement de la transformation et du conditionnement</li>
-            <li>Suivi logistique: transport, stockage, livraison</li>
-            <li>Signature/horodatage des événements (intégrité des données)</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h4>Côté Consommateur</h4>
-          <ul class="project-features">
-            <li>Scan du QR code présent sur le produit</li>
-            <li>Accès à l’historique complet et chronologique</li>
-            <li>Vérification de l’origine et des conditions de culture/transformation</li>
-            <li>Confiance et transparence accrues au moment de l’achat</li>
-          </ul>
-        </div>
-      </div>
+      <h2 class="section-title">Fonctionnalités clés</h2>
+      <ul class="project-features">
+        <li>Backend PHP avec architecture MVC</li>
+        <li>Base de données MySQL</li>
+        <li>Système de gestion d'actualités et d'archives</li>
+        <li>Service de newsletter (inscription, envoi, statistiques)</li>
+        <li>Interface d'administration complète</li>
+        <li>Campagne #BJ2026</li>
+      </ul>
     </div>
   </section>
 
@@ -116,6 +109,10 @@
       <p>&copy; <span id="year">2026</span> Tous droits réservés à Saint Michel</p>
     </div>
   </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="js/main.js"></script>
 </body>
