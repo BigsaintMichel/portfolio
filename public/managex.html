@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ManageX — Gestion d’entreprise</title>
+    <meta name="description" content="ManageX : application de gestion d'entreprise avec messagerie instantanée, transfert de fichiers et suivi des objectifs.">
+    <meta property="og:title" content="ManageX — Gestion d’entreprise">
+    <meta property="og:description" content="Suite de gestion d'entreprise inspirée de Slack (Laravel, Vue.js, MySQL).">
+    <meta property="og:image" content="https://bigsaintmichel.github.io/portfolio/images/og-image.png">
+    <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bigsaintmichel.github.io/portfolio/managex.html">
+  <meta name="twitter:card" content="summary_large_image">
+      <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Project Header Styles */
+        .project-header {
+            padding: 4rem 0 2rem;
+            background: linear-gradient(135deg, rgba(0, 20, 40, 0.9) 0%, rgba(0, 10, 20, 0.9) 100%);
+            border-bottom: 1px solid rgba(0, 255, 247, 0.2);
+        }
+        
+        .project-logo {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .project-logo-img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .project-title {
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            text-shadow: 0 0 10px rgba(0, 255, 247, 0.3);
+        }
+        
+        .project-description {
+            max-width: 800px;
+            margin: 0 auto;
+            color: #e0e0e0;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        
+        .project-features {
+            margin: 1.5rem 0 0 1.5rem;
+        }
+        
+        .project-features li {
+            margin-bottom: 0.8rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .project-features li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 3rem 0;
+            background: rgba(255, 255, 255, 0.03);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+            max-width: 1000px;
+            margin: 2rem auto 0;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 255, 247, 0.1);
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-3px);
+            background: rgba(0, 255, 247, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .feature-item i {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-right: 1rem;
+            width: 30px;
+            text-align: center;
+        }
+        
+        .feature-item span {
+            color: #e0e0e0;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        
+        @media (max-width: 768px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 0 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Gallery Styles */
+        
+        @media (max-width: 992px) {
+        }
+        
+        @media (max-width: 768px) {
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">Yrigalé Saint Michel</a>
+                <ul class="nav-links">
+                    <li><a href="index.html#about">À propos</a></li>
+                    <li><a class="nav-link" href="index.html#formation">Formation</a></li>
+                    <li><a href="projects.html">Projets</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Project Header Section -->
+    <section class="project-header">
+        <div class="container">
+            <div class="project-logo">
+                <div class="logo-aura">
+                    <div class="aura-canvas"></div>
+                    <img loading="lazy" src="images/managex.png" alt="Logo ManageX" class="project-logo-img">
+                </div>
+            </div>
+            <div class="project-description">
+                <h1 class="project-title">ManageX</h1>
+                <div class="project-content">
+                    <p>Managex est une application web de gestion d'entreprise inspirée de Slack. Elle inclut :</p>
+                    <ul class="project-features">
+                        <li>Gestion des utilisateurs et authentification</li>
+                        <li>Messagerie instantanée (chat privé et de groupe)</li>
+                        <li>Transfert de fichiers jusqu'à 200 Mo</li>
+                        <li>Gestion des objectifs hebdomadaires (définis par l'administrateur avec suivi par barre de progression)</li>
+                        <li>Gestion des emplois du temps hebdomadaires (statut présence ou télétravail défini par chaque employé)</li>
+                    </ul>
+                </div>
+                <div style="display:flex;justify-content:center;margin-top:1.5rem;">
+                  <a class="btn btn-outline" href="https://ya-consulting.com/managex" target="_blank" rel="noopener">Visiter le site</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Fonctionnalités principales</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-user-clock"></i>
+                    <span>Présences</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-tasks"></i>
+                    <span>Tâches</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-umbrella-beach"></i>
+                    <span>Congés</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <span>Paie</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-users"></i>
+                    <span>Utilisateurs</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-archive"></i>
+                    <span>Archive</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-comments"></i>
+                    <span>Messages</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Documents</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-poll"></i>
+                    <span>Sondages</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Showcase -->
+    <section class="project-showcase">
+        <div class="container">
+            <div class="mockup-frame mockup-browser"><div class="mockup-bar"><span></span><span></span><span></span></div><div class="mockup-screen" style="background: radial-gradient(ellipse at 30% 20%, rgba(124, 92, 255, 0.18), transparent 65%), #12121f;"><img loading="lazy" src="images/managex.png" alt="Logo ManageX"></div></div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year">2026</span> Tous droits réservés à Saint Michel</p>
+        </div>
+    </footer>
+
+    <script>
+        // Current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://portfolio-kappa-ochre-heyiw3k96o.vercel.app/sitemap.xml

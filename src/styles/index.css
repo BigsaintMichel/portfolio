@@ -1,0 +1,219 @@
+/* ==========================================================================
+   Design system — Tailwind v4 (tokens dans @theme)
+   Polices auto-hébergées (fontsource) : aucune requête externe, pas de CLS
+   lié au chargement tardif, et SplitText découpe sur les bonnes métriques.
+   ========================================================================== */
+@import '@fontsource/poppins/300.css';
+@import '@fontsource/poppins/400.css';
+@import '@fontsource/poppins/500.css';
+@import '@fontsource/poppins/600.css';
+@import '@fontsource-variable/space-grotesk/index.css';
+@import '@fontsource/jetbrains-mono/400.css';
+@import '@fontsource/jetbrains-mono/500.css';
+@import 'lenis/dist/lenis.css';
+@import 'tailwindcss';
+
+@theme {
+  /* — Couleurs de base — */
+  --color-ink: #0a0a1a;           /* fond */
+  --color-surface: #1a192b;       /* cartes */
+  --color-surface-2: #12121f;     /* surfaces secondaires */
+  --color-line: rgb(255 255 255 / 0.08);
+  --color-text: #e8e8f0;
+  --color-muted: #9a9ab0;         /* contraste ≈ 7:1 sur ink */
+
+  /* — Signature néon — */
+  --color-cyan: #00f7ff;
+  --color-magenta: #ff00e4;       /* accents uniquement (≈ 5,7:1) */
+
+  /* — Accents par étude de cas (utilisés via --accent sur la page détail) — */
+  --color-accent-nemesis: #ff2e63;
+  --color-accent-tracelot: #3ddc84;
+  --color-accent-naturalink: #a3e635;
+  --color-accent-fees: #ffb020;
+  --color-accent-catreps: #ff7a1a;
+  --color-accent-managex: #7c5cff;
+  --color-accent-edusave: #38bdf8;
+  --color-accent-jehovah: #d4af37;
+  --color-accent-jms: #f472b6;
+  --color-accent-jecpssm: #60a5fa;
+
+  /* — Typographie — */
+  --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Space Grotesk Variable', 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* — Courbes (miroir des easings GSAP pour les transitions CSS) — */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-expo: cubic-bezier(0.87, 0, 0.13, 1);
+
+  /* — Animations CSS légères (respectent motion-safe:) — */
+  --animate-ping-slow: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+  --animate-blink: blink 1s steps(1) infinite;
+  --animate-scroll-line: scroll-line 2.2s var(--ease-in-out-expo) infinite;
+
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+  @keyframes scroll-line {
+    0%   { transform: scaleY(0); transform-origin: top; }
+    45%  { transform: scaleY(1); transform-origin: top; }
+    55%  { transform: scaleY(1); transform-origin: bottom; }
+    100% { transform: scaleY(0); transform-origin: bottom; }
+  }
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+@layer base {
+  html {
+    background: var(--color-ink);
+    color: var(--color-text);
+    color-scheme: dark;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    font-family: var(--font-sans);
+    background: var(--color-ink);
+    min-height: 100svh;
+    overflow-x: clip;
+  }
+  ::selection {
+    background: var(--color-magenta);
+    color: var(--color-ink);
+  }
+  /* Focus visible : glow cyan, cohérent avec la signature */
+  :focus-visible {
+    outline: 2px solid var(--color-cyan);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  /* Ancres : laisse la place au header fixe si Lenis est désactivé */
+  [id] {
+    scroll-margin-top: 6rem;
+  }
+}
+
+/* ==========================================================================
+   Utilitaires de la signature visuelle
+   ========================================================================== */
+@utility container-x {
+  width: 100%;
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: 1rem; /* gouttière 16px mobile */
+  @variant sm { padding-inline: 1.5rem; }
+  @variant lg { padding-inline: 2.5rem; }
+}
+
+@utility text-gradient {
+  background: linear-gradient(100deg, var(--color-cyan) 0%, var(--color-magenta) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility bg-gradient-neon {
+  background: linear-gradient(100deg, var(--color-cyan) 0%, var(--color-magenta) 100%);
+}
+
+@utility glow-cyan {
+  box-shadow: 0 0 0 1px rgb(0 247 255 / 0.35), 0 0 24px -4px rgb(0 247 255 / 0.45);
+}
+
+@utility eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+/* ==========================================================================
+   Composants
+   ========================================================================== */
+@layer components {
+  /* Lien d'évitement (clavier / lecteurs d'écran) */
+  .skip-link {
+    position: fixed;
+    left: 1rem;
+    top: 1rem;
+    z-index: 100;
+    transform: translateY(-200%);
+    padding: 0.6rem 1rem;
+    border-radius: 999px;
+    background: var(--color-cyan);
+    color: var(--color-ink);
+    font-weight: 600;
+    transition: transform 0.3s var(--ease-out-expo);
+  }
+  .skip-link:focus { transform: translateY(0); }
+
+  /* Bouton principal : gradient + reflet (shine) au survol */
+  .btn-shine {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .btn-shine::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(115deg, transparent 30%, rgb(255 255 255 / 0.55) 50%, transparent 70%);
+    transform: translateX(-120%);
+    transition: transform 0.8s var(--ease-out-expo);
+  }
+  .btn-shine:hover::after,
+  .btn-shine:focus-visible::after { transform: translateX(120%); }
+
+  /* Masques SplitText : un peu d'air pour ne pas couper accents et jambages */
+  .split-word-mask,
+  .split-line-mask {
+    padding-block: 0.12em;
+    margin-block: -0.12em;
+  }
+
+  /* Halo de secours derrière la scène 3D (visible aussi sans WebGL / sans JS) */
+  .hero-glow {
+    background:
+      radial-gradient(40% 45% at 72% 45%, rgb(0 247 255 / 0.16), transparent 70%),
+      radial-gradient(30% 35% at 78% 60%, rgb(255 0 228 / 0.14), transparent 70%),
+      radial-gradient(60% 60% at 10% 100%, rgb(255 0 228 / 0.06), transparent 70%);
+  }
+
+  /* Grain très léger pour casser l'aplat du fond */
+  .noise::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 60;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
+
+/* ==========================================================================
+   Garde-fou d'intro (voir le script inline de index.html)
+   ========================================================================== */
+html.js:not(.intro-fallback) [data-intro] { visibility: hidden; }
+html.js:not(.intro-fallback) .preloader [data-letter] { transform: translateY(110%); }
+html:not(.js) .preloader,
+html.intro-fallback .preloader { display: none !important; }
+
+/* ==========================================================================
+   Mouvement réduit : on coupe les animations CSS décoratives
+   (les animations GSAP sont gérées dans src/lib/motion.js)
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
