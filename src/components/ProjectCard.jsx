@@ -48,8 +48,8 @@ export function Mockup({ project, large = false }) {
     // Cadre smartphone — hauteur relative au conteneur
     <div
       className={`shrink-0 rounded-[1.2rem] border border-line bg-ink/90 p-1.5 shadow-[0_10px_26px_-12px_rgb(0_0_0/0.8)] ${
-        large ? 'h-56' : 'h-36'
-      }`}
+        large ? 'h-full' : 'h-36'
+      } aspect-[9/19]`}
     >
       <div
         className="flex h-full w-full items-center justify-center overflow-hidden rounded-[0.85rem] p-3"
@@ -71,7 +71,7 @@ export function Mockup({ project, large = false }) {
         <span className="size-1.5 rounded-full bg-[#28c840]" />
       </div>
       <div
-        className={`flex items-center justify-center overflow-hidden p-3 ${large ? 'h-56 sm:h-72' : 'h-20'}`}
+        className={`flex items-center justify-center overflow-hidden p-3 ${large ? 'h-48 sm:h-60' : 'h-20'}`}
         style={{ background: screen }}
       >
         {visual}

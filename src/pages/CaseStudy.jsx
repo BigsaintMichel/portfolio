@@ -78,12 +78,31 @@ export function Component() {
           </div>
         </header>
 
-        {/* Grand mockup */}
+        {/* Grand mockup — format adapté : mobile centré + halo, web en bannière */}
         <div
           ref={mockupRef}
-          className="mt-12 grid place-items-center rounded-3xl border border-line bg-surface/30 px-6 py-12 sm:py-16"
+          className="relative mt-12 overflow-hidden rounded-3xl border border-line bg-surface/30"
         >
-          <Mockup project={p} large />
+          {/* Texture : grille subtile */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"
+          />
+          {/* Halo lumineux teinté accent */}
+          <div
+            aria-hidden="true"
+            className="absolute left-1/2 top-1/2 size-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[100px]"
+            style={{ background: `${p.accentColor}26` }}
+          />
+          {p.mockup === 'mobile' ? (
+            <div className="relative mx-auto flex h-[480px] w-full max-w-md items-center justify-center p-8">
+              <Mockup project={p} large />
+            </div>
+          ) : (
+            <div className="relative flex items-center justify-center px-6 py-10">
+              <Mockup project={p} large />
+            </div>
+          )}
         </div>
 
         {/* Contenu */}
