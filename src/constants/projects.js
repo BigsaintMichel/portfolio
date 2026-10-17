@@ -39,7 +39,7 @@ export const PROJECTS = [
     tags: ['Flutter', 'Node.js', 'Supabase', 'Hedera'],
     description:
       "Traçabilité et sécurisation de la chaîne d'approvisionnement en biomasse pour la centrale ECOR Divo. Offline-first, ancrage blockchain Hedera, conformité ESG/EUDR.",
-    image: '/images/tracelot/logo.svg',
+    image: '/images/tracelot/favicon.png',
     link: '/projets/tracelot',
     live: 'https://tracelot-biostock.vercel.app/',
     github: null,
