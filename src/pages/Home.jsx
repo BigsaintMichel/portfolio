@@ -288,9 +288,6 @@ function Contact() {
                 <SocialButton label={s.label} href={s.href} />
               </li>
             ))}
-            <li>
-              <SocialButton label="Email" href={`mailto:${SITE.email}`} />
-            </li>
           </ul>
         </div>
         <div data-contact-panel className="rounded-3xl border border-line bg-surface/40 p-6 sm:p-8">
