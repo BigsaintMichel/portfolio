@@ -22,7 +22,7 @@ export const PROJECTS = [
     github: null,
     status: 'public',
     statusLabel: 'Évolutif',
-    year: '2025',
+    year: '2026',
     role: 'Architecte & Développeur',
     accentColor: '#ff2e63',
     challenges: [
