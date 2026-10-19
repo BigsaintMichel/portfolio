@@ -15,7 +15,7 @@ export const PROJECTS = [
     tags: ['CrewAI', 'FastAPI', 'React', 'Supabase', 'Multimodal', 'Vision', 'LLM Routing'],
     description:
       "Plateforme d'assistance IA en production. 5 agents spécialisés (CrewAI) collaborent pour analyser des PDF techniques, traiter des images (Vision), et chercher sur le web. Architecture résiliente avec cascade de 5 LLM (Cerebras, Groq, Mistral) et auth Supabase. Développé en 8 jours (86 commits).",
-    image: '/images/projects/nemesis.webp',
+    image: null, // pas de visuel fourni → fallback « N » lumineux (accentColor)
     link: '/projets/nemesis',
     live: 'https://nemesis-ia-lac.vercel.app/',
     liveLabel: "Tester l'application",
