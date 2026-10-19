@@ -144,7 +144,7 @@ export function Component() {
             <div className="mt-6 flex flex-col gap-3">
               {p.live && (
                 <Button href={p.live} target="_blank" rel="noopener noreferrer" arrow>
-                  Voir le site live
+                  {p.liveLabel || 'Voir le site live'}
                 </Button>
               )}
               {p.github && (
