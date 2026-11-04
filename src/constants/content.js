@@ -8,7 +8,7 @@ export const ABOUT = {
   photo: '/images/photo.png',
   bio: [
     "Architecte logiciel basé en Côte d'Ivoire, spécialisé en IA appliquée à l'industrie. Je conçois des systèmes d'information industriels complets : capture terrain en mobile offline-first, supervision web, intégration blockchain et architectures cloud.",
-    "Actuellement en Master IA appliquée à l'industrie, je développe en autonomie une solution de traçabilité et de sécurisation pour lutter contre la fraude sur la biomasse (projet mené pour SODEN). Je travaille également sur Némésis, une plateforme d'orchestration d'agents IA.",
+    "Architecte logiciel, en parcours IA appliquée à l'industrie à Samara Polytech, je développe en autonomie une solution de traçabilité et de sécurisation pour lutter contre la fraude sur la biomasse (projet mené pour SODEN). Je travaille également sur Némésis, une plateforme d'orchestration d'agents IA.",
   ],
   // value → compteur animé au scroll ; sinon simple chip
   strengths: [
@@ -22,13 +22,13 @@ export const ABOUT = {
 
 export const FORMATION = [
   {
-    degree: "Master en Intelligence Artificielle appliquée à l'industrie",
+    degree: "Parcours international en Intelligence Artificielle appliquée à l'industrie",
     school: 'Samara Polytech — Samara, Russie',
-    period: '2026 · 2029',
+    period: '2026 · 2027',
     status: 'En cours',
     logo: '/images/samara-polytech/logo.svg',
     description:
-      "Spécialisation en IA appliquée aux procédés industriels : modélisation prédictive, vision industrielle, IoT et optimisation de lignes de production. Formation d'ingénieur orientée industrie de fabrication et de transformation.",
+      "Année préparatoire internationale à Samara Polytech, première étape d'un parcours d'ingénierie orienté IA appliquée aux procédés industriels. Objectif : compléter mon expertise d'architecte logiciel en modélisation prédictive, vision industrielle et IoT pour concevoir des systèmes industriels plus intelligents et plus fiables.",
   },
   {
     degree: 'Licence en Génie Logiciel',
