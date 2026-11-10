@@ -12,10 +12,10 @@ export const PROJECTS = [
     title: 'Némésis',
     subtitle: 'Orchestrateur multi-agents & multimodal',
     category: 'IA',
-    tags: ['CrewAI', 'FastAPI', 'React', 'Supabase', 'Multimodal', 'Vision', 'LLM Routing'],
+    tags: ['React', 'FastAPI', 'Supabase', 'OpenRouter', 'LiteLLM', 'CrewAI', 'Typst', 'PWA'],
     description:
-      "Plateforme d'assistance IA en production. 5 agents spécialisés (CrewAI) collaborent pour analyser des PDF techniques, traiter des images (Vision), et chercher sur le web. Architecture résiliente avec cascade de 5 LLM (Cerebras, Groq, Mistral) et auth Supabase. Développé en 8 jours (86 commits).",
-    image: null, // pas de visuel fourni → fallback « N » lumineux (accentColor)
+      "Plateforme d'assistance IA multi-modèles en production : application web installable (PWA) et bot Telegram, 5 formules (Gratuit, Essentiel, Premium, Ultra, Projet).",
+    image: '/images/projects/nemesis-logo.png',
     link: '/projets/nemesis',
     live: 'https://nemesis-ia-lac.vercel.app/',
     liveLabel: "Tester l'application",
@@ -26,9 +26,12 @@ export const PROJECTS = [
     role: 'Architecte & Développeur',
     accentColor: '#ff2e63',
     challenges: [
-      '5 agents CrewAI spécialisés (analyse PDF, Vision, recherche web) coordonnés sans perte de contexte entre les tours de parole.',
-      'Cascade résiliente de 5 LLM (Cerebras, Groq, Mistral) : bascule automatique en cas d\u2019échec ou de latence pour garantir la réponse.',
-      'FastAPI + Supabase (auth, persistance) avec interface React en streaming — développé en 8 jours (86 commits).',
+      'Routage automatique entre modèles via OpenRouter et LiteLLM (DeepSeek, Gemini, Claude Haiku et Sonnet selon la formule), avec modèles de secours.',
+      'Agents CrewAI : analyse de PDF, vision (photos, captures), recherche web avec sources.',
+      'Mémoire de conversation : historique, résumé glissant, cache de prompts pour réduire les coûts.',
+      'Dictée vocale (web et Telegram) par transcription automatique.',
+      'Rapports et mémoires générés en PDF (moteur Typst, thèmes de mise en page).',
+      "Suivi du coût réel de chaque requête et tableau de bord d'administration (consommation, marge par plan).",
     ],
   },
   {
