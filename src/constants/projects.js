@@ -141,10 +141,10 @@ export const PROJECTS = [
       "Application de gestion d'entreprise complète avec messagerie instantanée, transfert de fichiers et suivi des objectifs.",
     image: '/images/managex.png',
     link: '/projets/managex',
-    live: 'https://ya-consulting.com/managex',
+    live: null, // hébergement suspendu côté client — pas de lien mort exposé
     github: null,
     status: 'public',
-    statusLabel: null,
+    statusLabel: 'Démo hors ligne',
     year: null,
     role: 'Développeur Full Stack',
     accentColor: '#7c5cff',

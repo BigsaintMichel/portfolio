@@ -6,10 +6,8 @@ import SectionTitle from '../components/ui/SectionTitle'
 import Button from '../components/ui/Button'
 import ProjectCard from '../components/ProjectCard'
 import { useReveal } from '../hooks/useReveal'
-import { gsap, ScrollTrigger, useGSAP } from '../lib/gsap'
-import { MOTION } from '../lib/motion'
 import { SITE, SOCIALS } from '../constants/site'
-import { ABOUT, FORMATION, SKILLS } from '../constants/content'
+import { ABOUT, FORMATION, SKILLS, METHOD } from '../constants/content'
 import { PROJECTS } from '../constants/projects'
 
 /**
@@ -38,12 +36,17 @@ function About() {
       {/* Grille asymétrique 4/8 : photo portrait à gauche, texte à droite */}
       <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-12 md:gap-16">
         <div ref={photoRef} className="relative w-full max-w-[250px] md:col-span-4 md:max-w-none">
-          <img
-            src={ABOUT.photo}
-            alt={SITE.name}
-            loading="lazy"
-            className="aspect-[4/5] w-full rounded-2xl border border-line bg-surface object-cover"
-          />
+          <picture>
+            <source srcSet={ABOUT.photoWebp} type="image/webp" />
+            <img
+              src={ABOUT.photo}
+              alt={SITE.name}
+              loading="lazy"
+              width={800}
+              height={1200}
+              className="aspect-[4/5] w-full rounded-2xl border border-line bg-surface object-cover"
+            />
+          </picture>
         </div>
         <div ref={textRef} className="max-w-2xl md:col-span-8">
           <h3 data-about className="font-display text-xl font-semibold text-text">{SITE.name}</h3>
@@ -160,25 +163,6 @@ function Competences() {
   const gridRef = useRef(null)
   useReveal(gridRef, 'fade', { targets: '[data-skill-cat]', y: 24, stagger: 0.1 })
 
-  // Barres : remplissage progressif (scaleX depuis la gauche) à l'entrée dans le viewport
-  useGSAP(
-    () => {
-      gsap.fromTo(
-        '[data-skill-bar]',
-        { scaleX: 0 },
-        {
-          scaleX: 1,
-          transformOrigin: 'left center',
-          duration: 1.2,
-          ease: MOTION.ease.out,
-          stagger: 0.05,
-          scrollTrigger: { trigger: gridRef.current, start: MOTION.start },
-        },
-      )
-    },
-    { scope: gridRef },
-  )
-
   return (
     <section id="competences" aria-labelledby="competences-title" className="container-x scroll-mt-24 py-16 sm:py-20">
       <SectionTitle
@@ -191,21 +175,29 @@ function Competences() {
         {SKILLS.map((cat) => (
           <div key={cat.category} data-skill-cat className="rounded-3xl border border-line bg-surface/40 p-6 sm:p-8">
             <h3 className="font-display text-lg font-semibold text-text">{cat.category}</h3>
-            <ul className="mt-5 space-y-4">
+            <ul className="mt-5 space-y-3">
               {cat.items.map((s) => (
-                <li key={s.name}>
-                  <div className="mb-1.5 flex items-baseline justify-between text-sm">
-                    <span className="text-text">{s.name}</span>
-                    <span className="font-mono text-xs text-muted">{s.level}%</span>
-                  </div>
-                  <div className="h-[3px] overflow-hidden rounded-full bg-line">
-                    <div data-skill-bar className="bg-gradient-neon h-full rounded-full" style={{ width: `${s.level}%` }} />
-                  </div>
+                <li key={s.name} className="text-sm">
+                  <span className="font-medium text-text">{s.name}</span>
+                  <span className="text-muted"> — {s.proof}</span>
                 </li>
               ))}
             </ul>
           </div>
         ))}
+      </div>
+
+      {/* Méthode de travail */}
+      <div data-skill-cat className="mt-6 rounded-3xl border border-line bg-surface/40 p-6 sm:p-8">
+        <h3 className="font-display text-lg font-semibold text-text">Méthode de travail</h3>
+        <ul className="mt-5 space-y-3">
+          {METHOD.map((m) => (
+            <li key={m.slice(0, 32)} className="flex gap-3 text-sm leading-relaxed text-muted">
+              <span aria-hidden="true" className="mt-2 size-1.5 shrink-0 rounded-full bg-cyan shadow-[0_0_8px_#00f7ff]" />
+              {m}
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   )
@@ -278,10 +270,6 @@ function Contact() {
               <p className="text-text">{SITE.location}</p>
             </li>
           </ul>
-          <p className="mt-6 inline-flex items-center gap-2 rounded-full border border-cyan/30 bg-cyan/5 px-4 py-1.5 font-mono text-xs text-cyan">
-            <span className="size-2 rounded-full bg-cyan shadow-[0_0_8px_#00f7ff]" aria-hidden="true" />
-            Réponse en 24h
-          </p>
           <ul className="mt-6 flex flex-wrap gap-3">
             {SOCIALS.map((s) => (
               <li key={s.label}>
@@ -312,7 +300,7 @@ function ContactForm() {
       <div className="flex h-full flex-col justify-center gap-6">
         <p className="leading-relaxed text-muted">
           Un projet web, mobile ou un système d'information industriel ? Décrivez votre besoin par
-          email — je réponds sous 24h avec une première analyse.
+          email — je réponds avec une première analyse.
         </p>
         <div className="flex flex-wrap gap-3">
           <Button href={`mailto:${SITE.email}`} arrow>
@@ -335,7 +323,7 @@ function ContactForm() {
           </svg>
         </span>
         <p className="font-display text-lg font-semibold text-text">Message envoyé !</p>
-        <p className="text-sm text-muted">Merci pour votre message — je vous réponds sous 24h.</p>
+        <p className="text-sm text-muted">Merci pour votre message — je vous réponds rapidement.</p>
       </div>
     )
   }

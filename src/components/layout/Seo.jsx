@@ -1,5 +1,5 @@
 import { Head } from 'vite-react-ssg'
-import { SITE } from '../../constants/site'
+import { SITE, SOCIALS } from '../../constants/site'
 
 /**
  * Métadonnées d'une page. Rendu en HTML statique au build (vite-react-ssg),
@@ -33,11 +33,24 @@ export default function Seo({ title, description = SITE.description, path = '/',
       <meta property="og:image" content={imageUrl} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content={`${SITE.name} — ${SITE.title}`} />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={imageUrl} />
+
+      <script type="application/ld+json">
+        {JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'Person',
+          name: SITE.name,
+          jobTitle: SITE.title,
+          url: SITE.url,
+          email: `mailto:${SITE.email}`,
+          sameAs: SOCIALS.filter((s) => s.label === 'GitHub' || s.label === 'LinkedIn').map((s) => s.href),
+        })}
+      </script>
     </Head>
   )
 }

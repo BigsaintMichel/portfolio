@@ -6,15 +6,16 @@
 
 export const ABOUT = {
   photo: '/images/photo.png',
+  photoWebp: '/images/photo.webp',
   bio: [
     "Architecte logiciel basé en Côte d'Ivoire, spécialisé en IA appliquée à l'industrie. Je conçois des systèmes d'information industriels complets : capture terrain en mobile offline-first, supervision web, intégration blockchain et architectures cloud.",
     "Architecte logiciel, en parcours IA appliquée à l'industrie à Samara Polytech, je développe en autonomie une solution de traçabilité et de sécurisation pour lutter contre la fraude sur la biomasse (projet mené pour SODEN). Je travaille également sur Némésis, une plateforme d'orchestration d'agents IA.",
   ],
   // value → compteur animé au scroll ; sinon simple chip
   strengths: [
-    { value: 10, label: 'projets livrés' },
-    { value: 6, label: 'domaines de stack' },
-    { value: 3, label: 'apps en production' },
+    { value: 9, label: 'projets en production' },
+    { label: '1 concept (EduSave)' },
+    { value: 4, label: 'domaines de stack' },
     { label: "IA appliquée à l'industrie" },
     { label: 'Abidjan · Remote' },
   ],
@@ -47,45 +48,47 @@ export const SKILLS = [
   {
     category: 'Frontend',
     items: [
-      { name: 'HTML5', level: 95 },
-      { name: 'CSS3', level: 90 },
-      { name: 'JavaScript', level: 85 },
-      { name: 'React', level: 80 },
-      { name: 'Vue.js', level: 75 },
-      { name: 'Flutter / Dart', level: 80 },
+      { name: 'React', proof: 'fronts Némésis (PWA en production) et Naturalink' },
+      { name: 'Flutter / Dart', proof: 'TraceLot/BioStock, mobile offline-first' },
+      { name: 'Tailwind CSS', proof: 'ce portfolio (Vite + SSG)' },
+      { name: 'HTML / CSS / JavaScript', proof: 'socle de tous les sites livrés' },
     ],
   },
   {
     category: 'Backend',
     items: [
-      { name: 'Node.js', level: 80 },
-      { name: 'Express / Fastify', level: 75 },
-      { name: 'PHP', level: 80 },
-      { name: 'Laravel', level: 80 },
-      { name: 'NestJS', level: 70 },
-      { name: 'API REST', level: 85 },
-      { name: 'Postman', level: 80 },
+      { name: 'FastAPI', proof: 'backend Némésis, routage multi-modèles' },
+      { name: 'Node.js', proof: 'API TraceLot, synchronisation terrain' },
+      { name: 'PHP / Laravel', proof: 'Naturalink, CATREPS, JMS, JECPSSM' },
+      { name: 'API REST', proof: 'toutes les intégrations livrées' },
     ],
   },
   {
     category: 'Bases de données',
     items: [
-      { name: 'MySQL', level: 85 },
-      { name: 'SQLite', level: 85 },
-      { name: 'MongoDB', level: 70 },
-      { name: 'PostgreSQL', level: 75 },
-      { name: 'Supabase', level: 70 },
-      { name: 'Firebase', level: 75 },
+      { name: 'Supabase', proof: 'auth, RLS et persistance (Némésis, TraceLot)' },
+      { name: 'MySQL', proof: 'applications PHP en production' },
+      { name: 'SQLite', proof: 'stockage local offline-first (TraceLot)' },
+      { name: 'PostgreSQL', proof: 'via Supabase' },
     ],
   },
   {
     category: 'Expertise différenciante',
     items: [
-      { name: "IA appliquée à l'industrie", level: 70 },
-      { name: 'Blockchain (Hedera)', level: 65 },
-      { name: 'Offline-first / Sync', level: 75 },
-      { name: 'UML / MERISE', level: 80 },
-      { name: 'Git / GitHub', level: 90 },
+      { name: 'OpenRouter / LiteLLM', proof: 'routage multi-modèles avec secours (Némésis)' },
+      { name: 'CrewAI', proof: 'agents analyse PDF, vision, recherche web (Némésis)' },
+      { name: 'Blockchain Hedera', proof: 'ancrage des lots (TraceLot)' },
+      { name: 'Offline-first / Sync', proof: 'saisie sans réseau, sync différée (TraceLot)' },
+      { name: 'Typst', proof: 'rapports PDF générés (Némésis)' },
+      { name: 'Git / GitHub', proof: 'workflow de tous les projets' },
     ],
   },
+]
+
+export const METHOD = [
+  'Conception et architecture des systèmes avant toute ligne de code.',
+  'Spécification écrite des changements : ce qui change, pourquoi, comment le vérifier.',
+  'Revue de code et validation avant chaque mise en production.',
+  "Pilotage d'agents de code pour l'implémentation, avec revue systématique du diff.",
+  'Mesure des coûts et des marges sur les produits en production.',
 ]
