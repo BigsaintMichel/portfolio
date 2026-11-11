@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { useForm, ValidationError } from '@formspree/react'
 import Seo from '../components/layout/Seo'
 import Hero from '../sections/Hero'
@@ -159,9 +159,49 @@ function Projects() {
   )
 }
 
+// Pastille de projet : survol/focus éclaire toutes ses occurrences (même `key`).
+function ProjectPill({ project, lit, setLit, accent = 'cyan' }) {
+  const on = lit === project.key
+  const litClass =
+    accent === 'magenta'
+      ? 'border-magenta bg-magenta text-white'
+      : 'border-cyan bg-cyan text-ink'
+  return (
+    <button
+      type="button"
+      onMouseEnter={() => setLit(project.key)}
+      onFocus={() => setLit(project.key)}
+      onMouseLeave={() => setLit(null)}
+      onBlur={() => setLit(null)}
+      className={`rounded-full border px-2.5 py-1 font-mono text-[11px] leading-none transition-colors duration-150 motion-reduce:transition-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan ${
+        on ? litClass : 'border-line bg-white/[0.04] text-muted'
+      }`}
+    >
+      {project.label}
+    </button>
+  )
+}
+
+function SkillLine({ skill, lit, setLit, accent }) {
+  return (
+    <li className="border-t border-white/5 py-3 first:border-t-0 first:pt-0">
+      <p className="font-display text-[15px] font-medium text-text">{skill.name}</p>
+      <div className="mt-2 flex flex-wrap gap-1.5">
+        {skill.projects.map((p, i) => (
+          <ProjectPill key={`${p.key}-${i}`} project={p} lit={lit} setLit={setLit} accent={accent} />
+        ))}
+      </div>
+      <p className="mt-2 text-xs leading-relaxed text-muted/70">{skill.role}</p>
+    </li>
+  )
+}
+
 function Competences() {
   const gridRef = useRef(null)
+  const [lit, setLit] = useState(null)
   useReveal(gridRef, 'fade', { targets: '[data-skill-cat]', y: 24, stagger: 0.1 })
+
+  const [base, featured] = [SKILLS.filter((c) => !c.featured), SKILLS.find((c) => c.featured)]
 
   return (
     <section id="competences" aria-labelledby="competences-title" className="container-x scroll-mt-24 py-16 sm:py-20">
@@ -170,22 +210,36 @@ function Competences() {
         index="05"
         eyebrow="Compétences"
         title="Stack & expertise"
+        intro="Chaque technologie est rattachée aux projets qui l'utilisent. Survolez un projet pour voir tout ce sur quoi il repose."
       />
-      <div ref={gridRef} className="grid gap-6 md:grid-cols-2">
-        {SKILLS.map((cat) => (
-          <div key={cat.category} data-skill-cat className="rounded-3xl border border-line bg-surface/40 p-6 sm:p-8">
-            <h3 className="font-display text-lg font-semibold text-text">{cat.category}</h3>
-            <ul className="mt-5 space-y-3">
+      <div ref={gridRef} className="grid gap-6 md:grid-cols-3">
+        {base.map((cat) => (
+          <div key={cat.category} data-skill-cat className="rounded-3xl border border-line bg-surface/40 p-6 sm:p-7">
+            <h3 className="font-display text-base font-medium text-text">{cat.category}</h3>
+            <ul className="mt-5">
               {cat.items.map((s) => (
-                <li key={s.name} className="text-sm">
-                  <span className="font-medium text-text">{s.name}</span>
-                  <span className="text-muted"> — {s.proof}</span>
-                </li>
+                <SkillLine key={s.name} skill={s} lit={lit} setLit={setLit} />
               ))}
             </ul>
           </div>
         ))}
       </div>
+
+      {/* Expertise différenciante — bande pleine largeur, accent magenta */}
+      {featured && (
+        <div
+          data-skill-cat
+          className="mt-6 rounded-3xl border border-magenta/25 bg-surface/40 p-6 sm:p-8 [background-image:radial-gradient(120%_140%_at_0%_0%,rgb(255_0_228/0.08),transparent_58%)]"
+        >
+          <h3 className="font-display text-lg font-semibold text-text">{featured.category}</h3>
+          <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted">{featured.intro}</p>
+          <ul className="mt-6 grid gap-x-8 md:grid-cols-3">
+            {featured.items.map((s) => (
+              <SkillLine key={s.name} skill={s} lit={lit} setLit={setLit} accent="magenta" />
+            ))}
+          </ul>
+        </div>
+      )}
 
       {/* Méthode de travail */}
       <div data-skill-cat className="mt-6 rounded-3xl border border-line bg-surface/40 p-6 sm:p-8">

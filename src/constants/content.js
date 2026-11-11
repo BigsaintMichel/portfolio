@@ -44,43 +44,158 @@ export const FORMATION = [
 
 // Les projets ont leur propre fichier : ./projects.js
 
+// Compétences → preuves par projet (pastilles). La `key` regroupe les occurrences :
+// survoler une pastille éclaire toutes celles du même projet dans la section.
 export const SKILLS = [
   {
     category: 'Frontend',
     items: [
-      { name: 'React', proof: 'fronts Némésis (PWA en production) et Naturalink' },
-      { name: 'Flutter / Dart', proof: 'TraceLot/BioStock, mobile offline-first' },
-      { name: 'Tailwind CSS', proof: 'ce portfolio (Vite + SSG)' },
-      { name: 'HTML / CSS / JavaScript', proof: 'socle de tous les sites livrés' },
+      {
+        name: 'React',
+        role: 'PWA installable, interface de chat en flux continu',
+        projects: [
+          { key: 'nemesis', label: 'Némésis' },
+          { key: 'naturalink', label: 'Naturalink' },
+          { key: 'catreps', label: 'CATREPS' },
+          { key: 'portfolio', label: 'Ce portfolio' },
+        ],
+      },
+      {
+        name: 'Flutter / Dart',
+        role: 'Mobile hors ligne d\u2019abord, saisie terrain',
+        projects: [
+          { key: 'tracelot', label: 'TraceLot' },
+          { key: 'tracelot', label: 'BioStock' },
+          { key: 'fees', label: 'FEES' },
+          { key: 'edusave', label: 'EduSave' },
+        ],
+      },
+      {
+        name: 'Vue.js',
+        role: 'Interface de gestion temps réel',
+        projects: [{ key: 'managex', label: 'ManageX' }],
+      },
+      {
+        name: 'Tailwind CSS',
+        role: 'Vite et rendu statique',
+        projects: [{ key: 'portfolio', label: 'Ce portfolio' }],
+      },
+      {
+        name: 'HTML, CSS, JavaScript',
+        role: 'Socle de tous les sites livrés',
+        projects: [
+          { key: 'jms-afrique', label: 'JMS Afrique' },
+          { key: 'jecpssm', label: 'JECPSSM' },
+          { key: 'cabinet-jehovah-rapha', label: 'Cabinet J. Rapha' },
+        ],
+      },
     ],
   },
   {
     category: 'Backend',
     items: [
-      { name: 'FastAPI', proof: 'backend Némésis, routage multi-modèles' },
-      { name: 'Node.js', proof: 'API TraceLot, synchronisation terrain' },
-      { name: 'PHP / Laravel', proof: 'Naturalink, CATREPS, JMS, JECPSSM' },
-      { name: 'API REST', proof: 'toutes les intégrations livrées' },
+      {
+        name: 'FastAPI',
+        role: 'Routage multi-modèles, quotas, mesure des coûts',
+        projects: [{ key: 'nemesis', label: 'Némésis' }],
+      },
+      {
+        name: 'Node.js',
+        role: 'API de synchronisation terrain',
+        projects: [{ key: 'tracelot', label: 'TraceLot' }],
+      },
+      {
+        name: 'PHP / Laravel',
+        role: 'Applications métier et sites de contenu',
+        projects: [
+          { key: 'naturalink', label: 'Naturalink' },
+          { key: 'managex', label: 'ManageX' },
+          { key: 'jms-afrique', label: 'JMS Afrique' },
+          { key: 'jecpssm', label: 'JECPSSM' },
+        ],
+      },
+      {
+        name: 'API REST',
+        role: 'Toutes les intégrations livrées',
+        projects: [
+          { key: 'nemesis', label: 'Némésis' },
+          { key: 'tracelot', label: 'TraceLot' },
+          { key: 'naturalink', label: 'Naturalink' },
+        ],
+      },
     ],
   },
   {
     category: 'Bases de données',
     items: [
-      { name: 'Supabase', proof: 'auth, RLS et persistance (Némésis, TraceLot)' },
-      { name: 'MySQL', proof: 'applications PHP en production' },
-      { name: 'SQLite', proof: 'stockage local offline-first (TraceLot)' },
-      { name: 'PostgreSQL', proof: 'via Supabase' },
+      {
+        name: 'Supabase / PostgreSQL',
+        role: 'Authentification, RLS, persistance',
+        projects: [
+          { key: 'nemesis', label: 'Némésis' },
+          { key: 'tracelot', label: 'TraceLot' },
+        ],
+      },
+      {
+        name: 'MySQL',
+        role: 'Applications PHP en production',
+        projects: [
+          { key: 'jms-afrique', label: 'JMS Afrique' },
+          { key: 'jecpssm', label: 'JECPSSM' },
+          { key: 'managex', label: 'ManageX' },
+        ],
+      },
+      {
+        name: 'SQLite',
+        role: 'Stockage local hors ligne',
+        projects: [
+          { key: 'tracelot', label: 'TraceLot' },
+          { key: 'fees', label: 'FEES' },
+        ],
+      },
+      {
+        name: 'Firebase',
+        role: 'Backend as a service',
+        projects: [{ key: 'edusave', label: 'EduSave' }],
+      },
     ],
   },
   {
     category: 'Expertise différenciante',
+    featured: true,
+    intro:
+      "Ce qui ne s'apprend pas dans un tutoriel : faire tenir un système d'IA en production, avec son coût, et une chaîne de traçabilité qui survit à l'absence de réseau.",
     items: [
-      { name: 'OpenRouter / LiteLLM', proof: 'routage multi-modèles avec secours (Némésis)' },
-      { name: 'CrewAI', proof: 'agents analyse PDF, vision, recherche web (Némésis)' },
-      { name: 'Blockchain Hedera', proof: 'ancrage des lots (TraceLot)' },
-      { name: 'Offline-first / Sync', proof: 'saisie sans réseau, sync différée (TraceLot)' },
-      { name: 'Typst', proof: 'rapports PDF générés (Némésis)' },
-      { name: 'Git / GitHub', proof: 'workflow de tous les projets' },
+      {
+        name: 'OpenRouter / LiteLLM',
+        role: 'Routage entre modèles avec repli automatique, coût réel mesuré par requête',
+        projects: [{ key: 'nemesis', label: 'Némésis' }],
+      },
+      {
+        name: 'CrewAI',
+        role: 'Agents d\u2019analyse de PDF, vision, recherche web sourcée',
+        projects: [{ key: 'nemesis', label: 'Némésis' }],
+      },
+      {
+        name: 'Typst',
+        role: 'Rapports et mémoires générés en PDF',
+        projects: [{ key: 'nemesis', label: 'Némésis' }],
+      },
+      {
+        name: 'Blockchain Hedera',
+        role: 'Ancrage des lots, preuve d\u2019intégrité',
+        projects: [{ key: 'tracelot', label: 'TraceLot' }],
+      },
+      {
+        name: 'Hors ligne d\u2019abord',
+        role: 'Saisie sans réseau, synchronisation différée',
+        projects: [{ key: 'tracelot', label: 'TraceLot' }],
+      },
+      {
+        name: 'Git / GitHub',
+        role: 'Revue de diff et validation avant chaque mise en production',
+        projects: [{ key: 'tous', label: 'Tous les projets' }],
+      },
     ],
   },
 ]
